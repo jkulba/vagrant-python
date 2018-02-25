@@ -4,7 +4,7 @@
 echo "Updating system..."
 apt-get -y update
 
-echo "Installing dependencies for DL environment..."
+echo "Installing dependencies for python environment..."
 sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev openssl bzip2 git
 
 mkdir -p /home/vagrant/Downloads
@@ -15,6 +15,6 @@ tar xvf Python-2.7.14.tar.xz
 cd Python-2.7.14
 ./configure --enable-optimizations
 make
-make install
+sudo make install
 
 python --version
